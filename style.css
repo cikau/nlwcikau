@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* comando para respeitar o tamanho das bordas das caixas */ 
+}
+
+body {
+  background-color: rgb(12, 12, 15);
+  color: #eaeaea;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  padding: 64px;
+}
+
+.memory {
+  display: flex; 
+  flex-direction: column;
+  gap: 16px; 
+  margin-bottom: 64px;
+  }
+
+  .memory h1 {
+  font-size: 40px;
+  color: #bebebf;
+  text-decoration: none;
+}
+
+.memory a {
+ text-decoration: none;
+}
+
+.memory small {
+  color: #bebebf;
+  font-size: 12px;
+}
+
+.memory h2 {
+  font-size: 30px;
+}
+
+.memory img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover; /* ajuda a manter a imagem em boa definição, sem ficar esticada */ 
+  border-radius: 8px; /* deixa as bordas da imagem arredondadas */ 
+}
+
+.memory p {
+  font-size: 18px;
+  color: #bebebf;
+  line-height: 28px; /* espaçamento entre as linhas */  
+}
