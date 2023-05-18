@@ -8,10 +8,16 @@ body {
   background-color: rgb(12, 12, 15);
   color: #eaeaea;
   font-family: 'Roboto', sans-serif;
+  display: grid; /* indica como o espaço do body será organizado */ 
+  grid-template-areas: "profile timeline"; /* indica que haverá duas colunas no espaço do grid: profile e timeline */ 
+  grid-template-columns: 1fr 1fr; /* atribui uma fração da página para cada coluna */ 
+  grid-template-rows: 100vh; /* atribui a medida de 100 - da altura da tela do navegador - às linhas do espaço do grid - lembrando que o grid divide o espaço em linhas e colunas */ 
 }
 
 nav {
   padding: 64px;
+  grid-area: timeline; /* grid-area indica qual elemento receberá a denominação atribuída em grid-template-areas. Neste caso, o elemento nav representará a coluna "timeline" */
+  overflow-y: scroll; /* coloca uma barra de rolagem - de baixo para cima/cima para baixo no nav */ 
 }
 
 .memory {
@@ -20,16 +26,6 @@ nav {
   gap: 16px; 
   margin-bottom: 64px;
   }
-
-  .memory h1 {
-  font-size: 40px;
-  color: #bebebf;
-  text-decoration: none;
-}
-
-.memory a {
- text-decoration: none;
-}
 
 .memory small {
   color: #bebebf;
@@ -42,7 +38,7 @@ nav {
 
 .memory img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover; /* ajuda a manter a imagem em boa definição, sem ficar esticada */ 
   border-radius: 8px; /* deixa as bordas da imagem arredondadas */ 
 }
@@ -52,3 +48,37 @@ nav {
   color: #bebebf;
   line-height: 28px; /* espaçamento entre as linhas */  
 }
+
+aside {
+  grid-area: profile; /* grid-area indica qual elemento receberá a denominação atribuída em grid-template-areas. Neste caso, o elemento aside representará a coluna "profile" */ 
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza na horizontal */
+  justify-content: center; /* centraliza na vertical */ 
+  gap: 20px;
+  border-right: 1px solid;
+  border-image: linear-gradient(#727275, #2c2c31) 1;
+  background-image: url("./assets/background.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: auto 100;
+}
+
+aside img:nth-child(2) {
+border-radius: 50%;
+border: 4px solid transparent;
+width: 160px;
+height: 160px;
+background: linear-gradient(#d39e33, #ed5636, #633bbc) padding-box,
+    linear-gradient(260deg, #d39e33, #ed5636, #633bbc) border-box;
+}
+
+aside p {
+  font-size: 32px;
+  text-align: center;
+  }
+
+  aside span {
+    font-size: 12px;
+    color: #9e9ea0
+  }
