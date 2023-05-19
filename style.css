@@ -4,6 +4,19 @@
   box-sizing: border-box; /* comando para respeitar o tamanho das bordas das caixas */ 
 }
 
+::-webkit-scrollbar {
+width: 8px;
+} /* comando para customizar o navegador e suas ferramentas, neste caso, iremos customizar a barra de rolagem */
+
+
+::-webkit-scrollbar-track {
+background-color: #2c2c31;
+} /* comando para customizar o navegador e suas ferramentas, neste caso, iremos customizar a linha da barra de rolagem */
+
+::-webkit-scrollbar-thumb {
+background-color: #9e9ea0;
+} /* comando para customizar o navegador e suas ferramentas, neste caso, iremos customizar a barrinha que rola */
+
 body {
   background-color: rgb(12, 12, 15);
   color: #eaeaea;
